@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["/eleicoes/por-deputado","/enquete","/enquete/[id]","/enquete/ultima","/fale-com/deputados","/fale-com/lista-telefonica/administracao","/fale-com/lista-telefonica/deputados","/proponha-projetos","/proponha-projetos/[id]"]),self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB();

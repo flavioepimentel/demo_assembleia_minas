@@ -1,0 +1,331 @@
+/* ---------------------------------- */
+/* --- Itens de Normas e Projetos --- */
+/* ---------------------------------- */
+.almg-css_tipo {
+	display:table;
+	width:100%;
+	margin:0; padding:0; /* Nao configurar espaçamento aqui, pois almg-css_tipo é usado em varias páginas. Faça o espacamento de padding e margin na div que antecede o almg-css_tipo */
+	vertical-align:top;
+	text-decoration:none !important;
+}
+	/*
+	.almg-css_tipo:active * { color:#c80000; !important; border-bottom-color:#c80000; }
+	.almg-css_tipo a { text-decoration:none !important; }
+	.almg-css_tipo a:hover { text-decoration:none !important; }
+	*/
+
+.almg-css_tipo * { /*  :not(.btn) */
+	margin:0;
+	padding:0;
+	line-height:0%;
+}
+
+.almg-css_tipoBox {
+	display:block;
+	margin:0;
+	font-size:1.4em;
+	letter-spacing:-0.5px;
+	min-width:60px;
+	height:60px;
+	padding:10px;
+	line-height:40px !important;
+	text-align:center;
+	font-weight:300;
+	vertical-align:top;
+	margin-right:12px;
+	background-color:#e1e1e1;
+	/*border-radius:99%;*/
+}
+	.almg-css_tipo.lg .almg-css_tipoBox {
+		min-width:65px;
+		height:65px;
+		line-height:45px !important;
+		font-size:1.4em;
+		font-weight:400;
+		letter-spacing:-0.5px;	
+	}
+
+.almg-css_tipoCaption {
+	display:table-cell;
+	position:relative;
+	vertical-align:middle;
+	margin:0;
+	padding:0;
+	min-height:60px;
+	line-height:100%;
+	font-size:large;
+	width:100%;
+}
+	.almg-css_tipoCaption * {
+		margin:0;
+		padding:0;
+		line-height:0%;
+	}
+
+.almg-css_tipoCaptionSup {
+	display:inline-block;
+	font-size:0.85em;
+	letter-spacing:-0.5px;
+	line-height:100%;
+	border-bottom:1px dotted #ccc;
+	padding-bottom:5px;
+}
+	.almg-css_tipoCaptionSup i, .almg-css_tipoCaptionSup b {
+		font-weight:500;
+		font-style:normal;
+	}
+	.almg-css_tipoCaptionSup small {
+		font-weight:lighter;
+		font-style:normal;
+		padding-left:2px;
+		padding-right:2px;
+	}
+		.almg-css_tipo.lg .almg-css_tipoCaptionSup {
+			font-size:0.9em;
+			border-bottom-style:solid;
+		}
+		.almg-css_tipo.lg .almg-css_tipoCaptionSup i, .almg-css_tipo.lg .almg-css_tipoCaptionSup b {
+			font-weight:500;
+		}
+
+.almg-css_tipoCaptionSub {
+	display:block;
+	font-size:medium;
+	font-weight:500;
+	letter-spacing:-0.5px;
+	margin-top:0;
+	padding-top:6px;
+	line-height:100% !important;
+}
+	.almg-css_tipo.lg .almg-css_tipoCaptionSub {
+		font-size:0.65em;
+		font-weight:500;
+	}
+
+
+
+/* ---------------------- */
+/* --- Cores Projetos --- */
+/* ---------------------- */
+/*
+Bg: 4ea193 / Color: 00967c = PL / PLC / PCO / PRE
+Bg: be5a5a / Color: af0000 = DEN
+Bg: e49367 / Color: db6200 = IND
+Bg: c7b26c / Color: b79700 = MSG
+Bg: 84a64a / Color: 528100 = ODP / OPJ / OFC / OGE / OTC / OTJ / OTE /OVG
+Bg: 679ea5 / Color: 007580 = PLE / PEC
+Bg: 5678aa / Color: 003980 = REC
+Bg: 8275ad / Color: 391b84 = REL
+Bg: a166b9 / Color: 791ca0 = RPR / REP
+Bg: c267b6 / Color: ab0099 = RQN / RQA / RQC / RQE / RQO / RQS
+Bg: bd546e / Color: ab0038 = VET
+*/
+
+/* PL / PLC / PCO / PRE */
+.almg-css_tipo_cor-PL,
+.almg-css_tipo_cor-PLC,
+.almg-css_tipo_cor-PCO,
+.almg-css_tipo_cor-PRE {
+	color:#00967c !important;
+}
+
+.almg-css_tipo_bg-PL,
+.almg-css_tipo_bg-PLC,
+.almg-css_tipo_bg-PCO,
+.almg-css_tipo_bg-PRE {
+	background-color:#4ea193 !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-PL,
+.almg-css_tipo_border-PLC,
+.almg-css_tipo_border-PCO,
+.almg-css_tipo_border-PRE {
+	border-color:#00967c
+}
+
+/* DEN */
+.almg-css_tipo_cor-DEN {
+	color:#af0000 !important;
+}
+
+.almg-css_tipo_bg-DEN {
+	background-color:#be5a5a !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-DEN {
+	border-color:#af0000
+}
+
+/* IND */
+.almg-css_tipo_cor-IND {
+	color:#db6200 !important;
+}
+
+.almg-css_tipo_bg-IND {
+	background-color:#e49367 !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-IND {
+	border-color:#db6200
+}
+
+/* MSG */
+.almg-css_tipo_cor-MSG {
+	color:#b79700 !important;
+}
+
+.almg-css_tipo_bg-MSG {
+	background-color:#c7b26c !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-MSG {
+	border-color:#b79700
+}
+
+/* ODP / OPJ / OFC / OGE / OTC / OTJ / OTE /OVG */
+.almg-css_tipo_cor-ODP,
+.almg-css_tipo_cor-OPJ,
+.almg-css_tipo_cor-OFC,
+.almg-css_tipo_cor-OGE,
+.almg-css_tipo_cor-OTC,
+.almg-css_tipo_cor-OTJ,
+.almg-css_tipo_cor-OTE,
+.almg-css_tipo_cor-OVG,
+.almg-css_tipo_cor-OSJ {
+	color:#528100 !important;
+}
+
+.almg-css_tipo_bg-ODP,
+.almg-css_tipo_bg-OPJ,
+.almg-css_tipo_bg-OFC,
+.almg-css_tipo_bg-OGE,
+.almg-css_tipo_bg-OTC,
+.almg-css_tipo_bg-OTJ,
+.almg-css_tipo_bg-OTE,
+.almg-css_tipo_bg-OVG,
+.almg-css_tipo_bg-OSJ {
+	background-color:#84a64a !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-ODP,
+.almg-css_tipo_border-OPJ,
+.almg-css_tipo_border-OFC,
+.almg-css_tipo_border-OGE,
+.almg-css_tipo_border-OTC,
+.almg-css_tipo_border-OTJ,
+.almg-css_tipo_border-OTE,
+.almg-css_tipo_border-OVG,
+.almg-css_tipo_border-OSJ {
+	border-color:#528100
+}
+
+/* PLE / PEC */
+.almg-css_tipo_cor-PLE,
+.almg-css_tipo_cor-PEC {
+	color:#007580 !important;
+}
+
+.almg-css_tipo_bg-PLE,
+.almg-css_tipo_bg-PEC {
+	background-color:#679ea5 !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-PLE,
+.almg-css_tipo_border-PEC {
+	border-color:#007580
+}
+
+/* REC */
+.almg-css_tipo_cor-REC {
+	color:#003980 !important;
+}
+
+.almg-css_tipo_bg-REC {
+	background-color:#5678aa !important;
+	color:#fff !important;
+}
+
+
+.almg-css_tipo_border-REC {
+	border-color:#003980
+}
+
+/* REL */
+.almg-css_tipo_cor-REL {
+	color:#391b84 !important;
+}
+
+.almg-css_tipo_bg-REL {
+	background-color:#8275ad !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-REL {
+	border-color:#391b84
+}
+
+/* RPR / REP */
+.almg-css_tipo_cor-RPR,
+.almg-css_tipo_cor-REP {
+	color:#791ca0 !important;
+}
+
+.almg-css_tipo_bg-RPR,
+.almg-css_tipo_bg-REP {
+	background-color:#a166b9 !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-RPR,
+.almg-css_tipo_border-RPREPR {
+	border-color:#791ca0 !important;
+}
+
+/* RQN / RQA / RQC / RQE / RQO / RQS */
+.almg-css_tipo_cor-RQN,
+.almg-css_tipo_cor-RQA,
+.almg-css_tipo_cor-RQC,
+.almg-css_tipo_cor-RQE,
+.almg-css_tipo_cor-RQO,
+.almg-css_tipo_cor-RQS {
+	color:#ab0099 !important;
+}
+
+.almg-css_tipo_bg-RQN,
+.almg-css_tipo_bg-RQA,
+.almg-css_tipo_bg-RQC,
+.almg-css_tipo_bg-RQE,
+.almg-css_tipo_bg-RQO,
+.almg-css_tipo_bg-RQS {
+	background-color:#c267b6 !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-RQN,
+.almg-css_tipo_border-RQA,
+.almg-css_tipo_border-RQC,
+.almg-css_tipo_border-RQE,
+.almg-css_tipo_border-RQO,
+.almg-css_tipo_border-RQS {
+	border-color:#ab0099 !important;
+}
+
+/* VET */
+.almg-css_tipo_cor-VET {
+	color:#ab0038 !important;
+}
+
+.almg-css_tipo_bg-VET {
+	background-color:#bd546e !important;
+	color:#fff !important;
+}
+
+.almg-css_tipo_border-VET {
+	border-color:#ab0038 !important;
+}

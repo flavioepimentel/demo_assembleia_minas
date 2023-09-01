@@ -1,0 +1,85 @@
+/* ----------------- */
+/* --- Bootstrap --- */
+/* ----------------- */
+
+.object-fit-cover { /* Pollyfill de 'object-fit' até implementação da versão 5.3 ou superior do bootstrap (https://getbootstrap.com/docs/5.3/utilities/object-fit/), exemplo de uso: https://opencms.almg.gov.br/comunicacao/noticias/index.html?tagConteudo=229&reloaded&sort=instancedate_dt+desc&page=2 */
+	object-fit: cover;
+}
+
+/* -------------- */
+/* --- Bundle --- */
+/* -------------- */
+
+::placeholder {
+  color: var(--bs-gray-400) !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+	color:currentColor!important;
+}
+
+.org-opencms-gwt-client-ui-css-I_CmsLayoutBundle-I_CmsNotificationCss-notificationWarning {
+	display:none !important;
+}
+
+@media (max-width: 768px) {
+	.step:not(.swiper-horizontal) .step-row {
+		display:block;
+	}
+	.step:not(.swiper-horizontal) .step-row .step-icon {
+	    margin-bottom: 2.5rem;
+	}
+	.step:not(.swiper-horizontal) .step-row	.step-content {
+		position:relative;
+		background-color:#fff;
+	}
+}
+
+.nav-tabs {
+	padding-right:0 !important;
+	border-bottom-color: var(--bs-gray-200);
+	border-bottom-width: 1px !important;
+}
+
+@media (max-width: 768px) {
+	.nav-tabs {
+		border-bottom-width: 0 !important;
+	}
+}
+
+.nav-tabs .nav-link {
+	border-bottom-color: var(--bs-gray-300);
+	border-bottom-width: 2px !important;
+	margin: 0 !important;
+}
+
+.nav-tabs .nav-link:not(:first-child) {
+	margin-left: 0.5rem !important;
+}
+
+.nav-tabs .nav-link.active {
+	border-bottom-color: var(--bs-primary);
+	border-bottom-width: 2px !important;
+}
+
+.nav-tabs .nav-link.disabled, .nav-tabs .nav-link:disabled {
+	border-bottom-width: 1px !important;
+}
+
+@media (max-width: 768px) {
+	.nav-tabs .nav-link.disabled, .nav-tabs .nav-link:disabled {
+		border-color: initial !important;
+	}
+}
+
+.texto_legislacao_txt pre {
+    font-family: "Lucida Console", "Courier New", monospace, serif;
+	white-space: pre-wrap;
+
+}
+
+.texto_legislacao_txt {
+	width: 640px;
+    margin: 0 auto;
+    padding: 0 auto;
+}

@@ -1,0 +1,394 @@
+/* --------------------------- */
+/* --- Itens de Calendario --- */
+/* --------------------------- */
+.almg-css_evento {
+	position:relative;
+	display:table;
+	width:100%;
+	padding:0.5rem 0;
+	text-decoration:none;
+	color:#000;
+	border-bottom:2px solid var(--bs-gray-400);
+}
+	.almg-css_evento:hover, .almg-css_evento:active, .almg-css_evento:link, .almg-css_evento:visited {
+		text-decoration:none;
+		color:inherit;
+	}
+	.list-group-item:first-child .almg-css_evento {
+		border-top:0;
+		padding-top:0;
+		margin-top:-0.5rem;
+	}
+	.list-group-item:last-child .almg-css_evento {
+		border-bottom:0;
+		padding-bottom:0;
+		margin-bottom:0.5rem;
+	}
+	
+.almg-css_eventoArrow {
+	color:var(--bs-khaki);
+}
+
+.almg-css_data {
+	display:table-cell;
+	vertical-align:middle;
+	width:12%;
+	min-width:12rem;
+	text-align:center;
+}
+		@media (max-width: 992px) {
+			.almg-css_data {
+				min-width: 10rem;
+			}
+		}
+		@media (max-width: 768px) {
+			.almg-css_data {
+				min-width: 8rem;
+			}
+		}
+		@media (max-width: 576px) {
+			.almg-css_data {
+				min-width: 3.8rem;
+			}
+		}
+	.almg-css_dataSup {
+		display:block;
+		font-size: 2.3rem;
+		font-weight: 400;
+		line-height: 100%;
+	}
+	.almg-css_dataMid {
+		display:block;
+		font-size: 1.1rem;
+		text-transform: uppercase;
+		line-height: 110%;
+		font-weight: normal;
+		letter-spacing: 0.1rem;
+	}
+	.almg-css_dataSub {
+		display:block;
+		font-size: 1rem;
+		line-height: 110%;
+		font-weight:normal;
+		letter-spacing: 0.07rem;
+	}
+	.almg-css_dataHourGroup {
+		font-size: 0.9rem !important;
+		margin-top:0.5rem !important
+	}
+	.almg-css_dataHourSingle {
+		font-size: 1.5rem !important;
+	}
+		
+		@media (max-width: 768px) {
+			.almg-css_dataSup {
+				font-size: 1.6rem !important;
+			}
+			.almg-css_dataMid {
+				font-size: 1rem !important;
+				line-height: 120%;
+			}
+			.almg-css_dataSub {
+				font-size: 0.8rem !important;
+				line-height: 120%;
+			}
+			.almg-css_dataHourGroup {
+				font-size: 0.7rem !important;
+				margin-top: 0.25rem !important
+			}
+			.almg-css_dataHourSingle {
+				font-size: 1rem !important;
+			}
+		}
+
+
+.almg-css_eventoDesc {
+	display:table-cell;
+	height:110px; /* min-height não é aceito em table-cell. Ou mantem height ou usa display:block */
+	vertical-align:top;
+	border-left:2px solid var(--bs-gray-300);
+	/*border-radius: 5px;*/
+	margin:0;
+	padding:0;
+	background-color:#f5f5f5;
+	line-height:150%;
+}
+
+	.almg-css_eventoDescContent {
+		padding:0.8rem 2rem 0 1.2rem;
+	}
+
+		.almg-css_eventoDescContent .badge {
+			margin-bottom:0.3rem !important;
+			margin-right:3px !important;
+		}
+		.almg-css_eventoDescContent .badge img {
+			width:10px;
+		}
+		.almg-css_eventoDescContent .almg-css_eventoDescContentTit {
+			margin:0.3rem 0 0 0 !important;
+		}
+		.almg-css_eventoDescContent .almg-css_eventoDescContentSub {
+			font-size: 1.1rem;
+			line-height: 120%;
+			/*font-weight: 500;*/
+			letter-spacing: -.6px;
+			margin:6px 0 0 0 !important;
+		}
+		.almg-css_eventoDescContent p {
+			margin:0 !important;
+			line-height:140%;
+		}
+			.almg-css_eventoDescContent p.ui_brief {
+				margin:8px 0 5px 0 !important;
+			}
+			@media (max-width: 768px) {
+				.almg-css_eventoDescContent p.ui_brief {
+					display:none !important;
+				}
+			}
+
+
+		.almg-css_eventoDescContent p .ui_briefMore {
+			color:#c80000;
+			text-decoration:underline;
+			padding-left:3px;
+		}
+
+		@media (max-width: 768px) {
+			.almg-css_eventoDescContent .badge {
+				font-size: 0.7rem !important;
+			}
+			.almg-css_eventoDescContent .almg-css_eventoDescContentTit {
+			}
+			.almg-css_eventoDescContent .almg-css_eventoDescContentSub {
+				font-size: 1rem;
+				line-height: 120%;
+				margin-top: 3px;
+			}
+			.almg-css_eventoDescContent p {
+				font-size: 0.95rem;
+			}
+		}
+
+	.almg-css_eventoDescFooter {
+		display:flex;
+		min-height: 0.4rem;
+		margin-top: 0.8rem;
+		margin-left: 2px;
+		font-size: 0;
+    	line-height: 0;
+	}
+
+
+
+/* ---------------------- */
+/* --- Layout dropbox --- */
+/* ---------------------- */
+.almg-css_share-drp {
+	position:absolute; z-index:1;
+	padding:0;
+	margin:0;
+	top:5px;
+	right:5px;
+	text-align:left;
+	background:none;
+	border:0;
+}
+	.almg-css_share-drp .almg-css_share-drpItens {
+		display:none;
+		position:relative;
+		padding:0 0.8rem;
+		margin:-5px 3px 0 0;
+		background-color:#fff;
+		
+		-webkit-box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.20);
+		-moz-box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.20);
+		box-shadow: 1px 5px 15px 0pxx rgba(0,0,0,0.20);
+		
+		webkit-border-radius:3px;
+		-moz-border-radius:3px;
+		border-radius:3px;
+		
+		-webkit-user-select: none; /* Safari */
+		-ms-user-select: none; /* IE 10 and IE 11 */
+		user-select: none; /* Standard syntax */
+		
+		opacity:0.95;
+	}
+	.almg-css_share-drp .almg-css_share-drpItens.active {
+		display:block;
+	}
+	.almg-css_share-drp .almg-css_share-drpItens:after {
+		content:""; position:absolute; z-index:1; width:0; height:0; top:50%; right:-6px; margin-top:-6px;
+
+		border-top:6px solid transparent;
+		border-bottom:6px solid transparent;
+		border-left:6px solid #fff; 
+	}
+	.almg-css_share-drp .almg-css_shareItem {
+		display:inline-block;
+	}
+	.almg-css_share-drp .almg-css_shareItem.almg-css_shareItemBT {
+		float:right;
+		margin-top:-2px;
+		margin-right:-3px;
+		opacity:1;
+		color: var(--bs-secondary);
+	}
+	.almg-css_share-int .almg-css_shareItem.almg-css_shareItemWP {}
+	.almg-css_share-int .almg-css_shareItem.almg-css_shareItemTW {}
+	.almg-css_share-int .almg-css_shareItem.almg-css_shareItemFB {}
+	.almg-css_share-int .almg-css_shareItem.almg-css_shareItemAG {}
+	.almg-css_share-int .almg-css_shareItem.almg-css_shareItemEM {}
+	.almg-css_share-int .almg-css_shareItem.almg-css_shareItemDW {}
+	.almg-css_share-int .almg-css_shareItem.almg-css_shareItemPT {}
+		.almg-css_share-drp .almg-css_shareItem .almg-css_shareItemTag {
+			cursor:pointer;
+			display:block; width:auto; height:auto; box-sizing:border-box; line-height:normal;
+			padding:0.7rem 0.45rem;
+		}
+		.almg-css_share-drp .almg-css_shareItem .almg-css_shareItemTag.active {
+			background:none;
+		}
+		/*.almg-css_share-drp .almg-css_shareItem.almg-css_shareItemBT .almg-css_shareItemTag {
+			border:1px solid #fff;
+		}
+		.almg-css_share-drp .almg-css_shareItem.almg-css_shareItemBT .almg-css_shareItemTag.active {
+			border:1px solid #000;
+		}*/
+			.almg-css_share-drp .almg-css_shareItem .almg-css_shareItemTag i {
+				font-size: larger;
+			}
+			.almg-css_share-drp .almg-css_shareItem.almg-css_shareItemBT .almg-css_shareItemTag i {
+				font-size: large;
+			}
+
+/* --- Especifico: Layout dropbox dentro de outro share (ex: Chat do TIC) --- */
+.almg-css_shareItem .almg-css_share-drp {
+	top:0;
+	right:0;
+}
+	.almg-css_shareItem .almg-css_share-drp .almg-css_shareItem.almg-css_shareItemBT {
+		float:left;
+		margin-right:0;
+	}
+		.almg-css_shareItem .almg-css_share-drp .almg-css_shareItem.almg-css_shareItemBT .almg-css_shareItemTag {
+			padding:0.5rem 0.4rem !important; /* padding-top deve ser igual a .almg-css_share .almg-css_shareItem .almg-css_shareItemTag */
+		}
+		.almg-css_shareItem .almg-css_share-drp .almg-css_shareItem.almg-css_shareItemBT .almg-css_shareItemTag.active {
+			background-color:transparent;
+		}
+		.almg-css_shareItem .almg-css_share-drp .almg-css_shareItem.almg-css_shareItemBT .almg-css_shareItemTag.active:after {
+			display:none;
+		}
+			.almg-css_shareItem .almg-css_share-drp .almg-css_shareItem.almg-css_shareItemBT .almg-css_shareItemTag img {
+				width:20px !important;
+				height:20px !important;
+			}
+		
+	.almg-css_shareItem .almg-css_share-drp .almg-css_share-drpItens {
+		position:absolute !important;
+		width:190px !important;
+		padding:0.2rem 0.5rem !important;
+		margin-left:40px !important;
+		margin-top:-0.3rem !important;
+	}
+	.almg-css_shareItem .almg-css_share-drp .almg-css_share-drpItens:after {
+		content:""; position:absolute; z-index:1; width:0; height:0; top:50%; left:-6px; margin-top:-6px;
+
+		border-top:6px solid transparent;
+		border-bottom:6px solid transparent;
+		border-left:none;
+		border-right:6px solid #fff; 
+	}
+		.almg-css_shareItem .almg-css_share-drp .almg-css_share-drpItens .almg-css_shareItem {
+		}
+		.almg-css_shareItem .almg-css_share-drp .almg-css_share-drpItens .almg-css_shareItem .almg-css_shareItemTag {
+			padding:0.5rem 0.7rem !important;
+		}
+
+
+
+/* -------------------------------- */
+/* --- Cores Atividades/Eventos --- */
+/* -------------------------------- */
+
+:root {
+	/*
+	--evento-verde:
+	(0) Plenario
+	*/
+	--evento-verde-light: #e0f4f3;
+	--evento-verde-normal: #adc8c7;
+	--evento-verde-heavy: #30b3ad;
+	
+	/*
+	--evento-roxo
+	(1) Comissoes
+	(25) Debate Público
+	*/
+	--evento-roxo-light: #f3eef5;
+	--evento-roxo-normal: #bfb2c4;
+	--evento-roxo-heavy: #8a5b9d;
+	
+	/*
+	--evento-laranja
+	(EventsGroup) Eventos
+	(2 e 3) Visitas Orientadas
+	(4) Ciclos, Fóruns e Seminários
+	(5) Conferências
+	(6) Outros Eventos
+	(14) ALMG Cultural
+	*/
+	--evento-laranja-light: #fef5e5;
+	--evento-laranja-normal: #f2cc82;
+	--evento-laranja-heavy: #f19f00;
+}
+
+/* --evento-verde: */
+.almg-css_evento0 .almg-css_eventoArrow { color:var(--evento-verde-heavy) !important; }
+.almg-css_evento0 .almg-css_eventoDesc { border-color:var(--evento-verde-heavy) !important; }
+.almg-css_evento0 .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-verde-heavy) !important; }
+
+/* --evento-roxo: */
+.almg-css_evento1 .almg-css_eventoArrow { color:var(--evento-roxo-heavy) !important; }
+.almg-css_evento1 .almg-css_eventoDesc { border-color:var(--evento-roxo-heavy) !important; }
+.almg-css_evento1 .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-roxo-heavy) !important; }
+
+.almg-css_evento25 .almg-css_eventoArrow { color:var(--evento-roxo-heavy) !important; }
+.almg-css_evento25 .almg-css_eventoDesc { border-color:var(--evento-roxo-heavy) !important; }
+.almg-css_evento25 .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-roxo-heavy) !important; }
+
+/* --evento-laraja: */
+.almg-css_eventoEventsGroup .almg-css_eventoArrow { color:var(--evento-laranja-heavy) !important; }
+.almg-css_eventoEventsGroup .almg-css_eventoDesc { border-color:var(--evento-laranja-heavy) !important; }
+.almg-css_eventoEventsGroup .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-laranja-heavy) !important; }
+
+.almg-css_evento2 .almg-css_eventoArrow { color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento2 .almg-css_eventoDesc { border-color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento2 .almg-css_eventoDesc. badge.showTag { background-color:var(--evento-laranja-heavy) !important; }
+
+.almg-css_evento3 .almg-css_eventoArrow { color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento3 .almg-css_eventoDesc { border-color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento3 .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-laranja-heavy) !important; }
+
+.almg-css_evento3 .almg-css_eventoArrow { color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento3 .almg-css_eventoDesc { border-color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento3 .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-laranja-heavy) !important; }
+
+.almg-css_evento4 .almg-css_eventoArrow { color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento4 .almg-css_eventoDesc { border-color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento4 .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-laranja-heavy) !important; }
+
+.almg-css_evento5 .almg-css_eventoArrow { color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento5 .almg-css_eventoDesc { border-color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento5 .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-laranja-heavy) !important; }
+
+.almg-css_evento6 .almg-css_eventoArrow { color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento6 .almg-css_eventoDesc { border-color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento6 .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-laranja-heavy) !important; }
+
+.almg-css_evento14 .almg-css_eventoArrow { color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento14 .almg-css_eventoDesc { border-color:var(--evento-laranja-heavy) !important; }
+.almg-css_evento14 .almg-css_eventoDesc .badge.showTag { background-color:var(--evento-laranja-heavy) !important; }

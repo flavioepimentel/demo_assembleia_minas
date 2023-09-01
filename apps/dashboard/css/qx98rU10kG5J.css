@@ -1,0 +1,255 @@
+/* ------------- */
+/* --- GERAL --- */
+/* ------------- */
+#mobi-almg .mbsc-font {
+	font-family: var(--bs-body-font-family) !important;
+}
+
+#mobi-almg .mbsc-calendar-header,
+#mobi-almg .mbsc-calendar-week-days {
+    background-color:transparent !important;
+}
+
+#mobi-almg .mbsc-almg-2.mbsc-calendar-button.mbsc-button {
+    margin:0;
+    padding:0;
+}
+#mobi-almg .mbsc-calendar-title {
+    padding:0 .25em 0 0;
+    /*font-size: 1.45rem;
+    line-height: 100%;
+    font-weight: 600;
+    color: var(--bs-gray-550);*/
+}
+
+/*#mobi-almg .mbsc-event-list-scroll,
+#mobi-almg .mbsc-schedule-grid-scroll {*/
+/*#mobi-almg .mbsc-eventcalendar-schedule,
+#mobi-almg .mbsc-eventcalendar {*/
+#mobi-almg-show {
+    max-height: 490px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+@media only screen and (max-width: 768px) {
+    #mobi-almg-show {
+        max-height: 350px;
+    }
+}
+
+
+
+/* -------------------- */
+/* --- PICKER RANGE --- */
+/* -------------------- */
+.mbsc-ios.mbsc-popup-buttons{
+	order:0;
+	border-top:1px solid #ccc;
+	border-bottom:0;
+}
+@media only screen and (max-width: 576px) {
+    .mbsc-ios.mbsc-popup-buttons{
+		order:-1;
+		border-top:0;
+		border-bottom:1px solid #ccc;
+    }
+}
+
+
+
+/* ------------------- */
+/* --- PICKER WEEK --- */
+/* ------------------- */
+/* Cabecalho */
+#mobi-almg.mobi-almg-pickerweek .mbsc-datepicker-inline {
+    border: 0 !important;
+}
+
+/* Inativo */
+#mobi-almg.mobi-almg-pickerweek .mbsc-disabled .mbsc-calendar-cell-text,
+#mobi-almg.mobi-almg-pickerweek .mbsc-disabled .mbsc-calendar-month-name {
+    opacity: .3;
+}
+
+/* Hoje */
+#mobi-almg.mobi-almg-pickerweek .mbsc-calendar-today,
+#mobi-almg.mobi-almg-pickerweek .mbsc-calendar-week-nr {
+    background-color:var(--bs-gray-700) !important;
+    color:#fff;
+    /*color:var(--bs-secondary-light);*/
+}
+
+/* Dias */
+#mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day {}
+#mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day-text {
+    position:relative;
+    margin:0.3em auto !important;
+    padding:0 !important;
+
+    font-size:0.9	em !important;
+    width:24px !important;
+    height:24px !important;
+    line-height:23px !important;
+}
+#mobi-almg.mobi-almg-pickerweek .mbsc-hover .mbsc-calendar-day-text {
+    background-color:var(--bs-gray-200) !important;
+    color:#000 !important;
+}
+
+/* Selecionado */
+#mobi-almg.mobi-almg-pickerweek .mbsc-selected .mbsc-calendar-day-text {
+    background-color:var(--bs-primary-alt) !important;
+    color:#fff !important;
+}
+
+/* Celula */
+/*#mobi-almg.mobi-almg-pickerweek .bsc-calendar-cell {
+margin:0 !important;
+line-height:100% !important;
+padding:0 !important;
+}*/
+
+/* Marcacoes */
+#mobi-almg.mobi-almg-pickerweek .mbsc-calendar-marks {
+    transform: none !important;
+    margin-top:0px;
+}
+
+/* Fim de semana */
+#mobi-almg.mobi-almg-pickerweek .mbsc-calendar-week-day:first-child,
+#mobi-almg.mobi-almg-pickerweek .mbsc-calendar-week-day:last-child {
+    /*color:var(--bs-secondary-light) !important;*/
+}
+#mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day.mbsc-calendar-cell:first-child .mbsc-calendar-cell-text,
+#mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day.mbsc-calendar-cell:last-child .mbsc-calendar-cell-text {
+    opacity:1;
+    color:var(--bs-gray-400) !important;
+}
+
+@media only screen and (min-width: 768px) {
+    /* Dias */
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day {}
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day-text {
+        font-size:1.4em !important;
+        width:47px !important;
+        height:47px !important;
+        line-height:44px !important;
+    }
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-cell-text {
+        background-color:#f5f5f5;
+    }
+
+    /* Marcacoes */
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-marks {
+        height: 1em !important;
+        margin-top:-3px;
+    }
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-marks .mbsc-calendar-mark {
+        height:.4em !important;
+        width:.4em !important;
+    }
+}
+
+@media only screen and (min-width: 992px) { /* and (max-width: 1200px) */
+    /* Cabecalho */
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-title {
+        font-size:1.5em;
+        padding:0 .1em;
+    }
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-title.mbsc-calendar-year {
+        font-weight: 200;
+    }
+
+    /* Dias */
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day {}
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day-text {
+        font-size:1.7em !important;
+        width:60px !important;
+        height:60px !important;
+        line-height:58px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    #mobi-almg.mobi-almg-pickerweek .mbsc-datepicker-inline {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    /* Dias */
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day {}
+    #mobi-almg.mobi-almg-pickerweek .mbsc-calendar-day-text {
+        font-size:1.8em !important;
+        width:67px !important;
+        height:67px !important;
+        line-height:63px !important;
+    }
+}
+
+
+/* ----------------------- */
+/* --- PICKER MULTIPLE --- */
+/* ----------------------- */
+#mobi-almg.mobi-almg-pickermultiple .wrapper {
+    border:none !important;
+}
+
+
+/* ---------------- */
+/* --- CALENDAR --- */
+/* ---------------- */
+#mobi-almg.mobi-almg-schedule .mbsc-almg-2.mbsc-schedule-header {
+	padding:2px 0;
+	border-top:1px solid #ccc !important;
+}
+
+#mobi-almg.mobi-almg-schedule .mbsc-schedule-all-day-wrapper-shadow:after {
+	box-shadow:none !important;
+}
+
+#mobi-almg.mobi-almg-calendar .mbsc-calendar-row .mbsc-calendar-cell:first-child {
+    border-left:1px solid #ccc;
+}
+#mobi-almg.mobi-almg-calendar .mbsc-calendar-row .mbsc-calendar-cell:last-child {
+    border-right:1px solid #ccc;
+}
+
+
+/* ---------------- */
+/* --- TIMELINE --- */
+/* ---------------- */
+#mobi-almg.mobi-almg-timeline {
+}
+
+#mobi-almg.mobi-almg-timeline .mbsc-timeline-header-date {
+    background-color: #f7f7f7;
+	padding:6px 0;
+	font-weight:normal;
+	font-size:15px !important;
+}
+
+#mobi-almg.mobi-almg-timeline .mbsc-almg-2.mbsc-timeline-header-text {
+    background-color: transparent;
+	font-size:15px !important;
+}
+
+
+
+/* -------------- */
+/* --- AGENDA --- */
+/* -------------- */
+#mobi-almg.mobi-almg-agenda {
+    border-bottom:1px solid #ccc;
+}
+#mobi-almg.mobi-almg-agenda .mbsc-schedule-date-header {
+}
+
+#mobi-almg.mobi-almg-agenda .mbsc-ios.mbsc-schedule-date-header-text {
+	background-color: #f7f7f7;
+	padding:8px 0 8px 4px;
+	font-weight:normal;
+	font-size:15px !important;
+	text-align:left;
+}

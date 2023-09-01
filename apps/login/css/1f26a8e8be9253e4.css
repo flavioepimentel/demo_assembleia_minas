@@ -1,0 +1,44 @@
+.styles_container__V34Xz {
+    margin-bottom: 1rem;
+    width: 100%
+}
+
+.styles_link__IMdpU {
+    margin-top: -1rem
+}
+
+.styles_link__IMdpU a:hover {
+    text-decoration: underline
+}
+
+.styles_link__IMdpU button {
+    padding: 0
+}
+
+.styles_container__fqJ2e {
+    padding: 3rem 1rem
+}
+
+.styles_container__fqJ2e,
+.styles_loginBox__6xAg0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.styles_loginBox__6xAg0 {
+    width: 100%;
+    max-width: 600px;
+    min-width: 275px;
+    justify-content: center
+}
+
+.styles_loginBox__6xAg0>button {
+    margin-bottom: 1rem
+}
+
+.styles_loginBox__6xAg0 a {
+    text-decoration: none
+}
+
+/*# sourceMappingURL=1f26a8e8be9253e4.css.map*/
