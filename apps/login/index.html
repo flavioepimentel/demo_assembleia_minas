@@ -160,8 +160,8 @@
             </div>
           </nav>
           <nav class="no-print navbar navbar-expand-xl navbar-light">
-            <div class="position-relative container"><a href="#" class="navbar-brand"><img src="fonts/logo-almg.svg"
-                  class="width-17x py-2 ps-1" alt="Logomarca ALMG"></a>
+            <div class="position-relative container"><a href="../../" class="navbar-brand"><img
+                  src="fonts/logo-almg.svg" class="width-17x py-2 ps-1" alt="Logomarca ALMG"></a>
               <div>
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item dropdown" data-headlessui-state><a href="#" role="button"
@@ -240,19 +240,29 @@
             </div>
             <div class="styles_container__V34Xz">
               <div></div>
-              <form novalidate class>
+              <form novalidate class id="form-login">
                 <div class="g-3 row">
                   <div class="styles_inputTemplate__NqWSq col-lg-12 col-md-12 col-sm-12">
-                    <div class="form-floating"><input name="email" placeholder="Ex. joaodasilva@gmail.com"
-                        data-testid="email" type="text" id="email" class="form-control" value><label
-                        for="email"><span>E-mail</span><span class="ui_requiredSignal"> </span></label></div>
+                    <div class="form-floating">
+                      <input name="email" placeholder="Ex. joaodasilva@gmail.com" type="text" id="email"
+                        class="form-control" value>
+                      <label for="email">
+                        <span>E-mail</span>
+                        <span></span>
+                      </label>
+                    </div>
                     <div class="almg-invalid-feedback" data-cy="feedbackemail"></div>
                   </div>
                   <div class="styles_inputTemplate__NqWSq col-lg-12 col-md-12 col-sm-12">
-                    <div class="form-floating"><input name="senha" placeholder="Senha" data-testid="senha"
-                        type="password" id="senha" class="form-control" value><label for="senha"><span>Senha</span><span
-                          class="ui_requiredSignal"> </span></label></div>
-                    <div class="almg-invalid-feedback" data-cy="feedbacksenha"></div>
+                    <div class="form-floating">
+                      <input name="senha" placeholder="Senha" type="password" id="senha" class="form-control" value>
+                      <label for="senha">
+                        <span>Senha</span>
+                        <span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="almg-invalid-feedback"></div>
                   </div>
                 </div>
                 <div class="mb-3 mt-1 text-end styles_link__IMdpU"><button type="button" data-cy="esqueceuSenhaLink"
@@ -479,8 +489,32 @@
       </footer>
     </div>
   </div>
-  <script id="__NEXT_DATA__"
-    type="application/json">{"props":{"pageProps":{"callbackUrl":"https://www.almg.gov.br/","cookie":null,"error":null,"session":null},"__N_SSP":true},"page":"/login","query":{"callbackUrl":"https://www.almg.gov.br/"},"buildId":"vJpNsK_B8rYEhZaj1_Xx-","assetPrefix":"/apps","isFallback":false,"gssp":true,"scriptLoader":[]}</script>
+  <script id="__NEXT_DATA__" type="application/json">
+    {"props":{"pageProps":{"callbackUrl":"https://www.almg.gov.br/","cookie":null,"error":null,"session":null},"__N_SSP":true},"page":"/login","query":{"callbackUrl":"https://www.almg.gov.br/"},"buildId":"vJpNsK_B8rYEhZaj1_Xx-","assetPrefix":"/apps","isFallback":false,"gssp":true,"scriptLoader":[]}
+
+  
+  </script>
+  <script>
+    function getLocalStorage(key) {
+      const item = localStorage.getItem(key);
+      return JSON.parse(item);
+    }
+
+    function setLocalStorage(key, item) {
+      localStorage.setItem(key, JSON.stringify(item));
+    }
+    function apresentationLogin() {
+      document.getElementById("form-login").addEventListener("submit", function (event) {
+        event.preventDefault()
+        let email = document.getElementById('email').value
+        let senha = document.getElementById('senha').value
+      });
+
+      alert(f`Olá ${email}, ${senha}`)
+      setLocalStorage('acesso', email)
+      setLocalStorage('senha', senha)
+    }
+  </script>
 </body>
 
 </html>
