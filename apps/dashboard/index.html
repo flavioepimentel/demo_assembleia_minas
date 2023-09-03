@@ -643,12 +643,13 @@
 				</div>
 			</div>
 
+
 			<!-- Usuário - Logado -->
 			<div class="js_loginToggle d-none">
 				<div class="offcanvas offcanvas-custom1 offcanvas-end" tabindex="-1" id="offcanvasEnd"
 					aria-labelledby="offcanvasEndLabel">
 					<div class="border-bottom offcanvas-header p-3 py-2">
-						<span class="fs-5 text-secondary">Olá, <span class="js_loginNome"></span></span>
+						<span class="fs-5 text-secondary" id="paragrafo">Olá, <span class="js_loginNome"></span></span>
 						<button type="button" class="btn-close p-0 m-0 width-3x height-3x flex-center ms-auto"
 							data-bs-dismiss="offcanvas" aria-label="Close">
 							<i class="bx bx-x display-1 bx text-primary"></i>
@@ -775,7 +776,7 @@
 			<nav class="navbar navbar-expand-xl bg-white">
 				<div class="container position-relative">
 					<!-- Marca -->
-					<a class="navbar-brand" href="/">
+					<a class="navbar-brand" href="https://www.almg.gov.br/">
 						<img src="fonts/logo.svg" alt="Logomarca ALMG" class="py-2 ps-1 width-17x">
 					</a>
 
@@ -1146,9 +1147,77 @@
 
 		<section>
 			<div>
-				<p>Olá</p>
+				<p id="paragrafo__welcome"></p>
+				<br>
+				<p>Dados do usuário:</p>
+				<br>
+				<p id="dados"></p>
 			</div>
 		</section>
+		<script>
+			let data = {
+				"servidores": [{
+					"Nomeado": "Nilson Santos Júnior",
+					"ID": "M-4.083.714",
+					"CPF": "xxx168.096xxx",
+					"Nascimento": "27/03/1970",
+					"Maternidade": "Maria Lúcia Dias",
+					"email": "nilsonsantosmg@gmai.com",
+					"senha": "31991760601",
+					"cargo": "Assessor externo, trabalhos partidários",
+					"gabinete": "01",
+					"Vencimento": "4.893,00",
+					"COD ID": "3765765/2023"
+				},
+				{
+					"Nomeado": "Raul de Oliveira Guitto",
+					"ID": "MG11 330531",
+					"CPF": "xxx060.536xxx",
+					"Maternidade": "Nedina Pereira de Oliveira Guitti",
+					"email": "raul.guitti@hotmail.com",
+					"senha": "31973361867",
+					"cargo": "Assessor externo, trabalhos partidários",
+					"gabinete": "01",
+					"Vencimento": "4.893,00",
+					"COD ID": "376527/2023"
+				}]
+			}
+
+			function getLocalStorage(key) {
+				const item = localStorage.getItem(key);
+				return JSON.parse(item);
+			}
+
+			function onLoad() {
+				const email = getLocalStorage('acesso')
+				const senha = getLocalStorage('senha')
+				console.log(email, senha)
+				let user = data['servidores'].filter((e) => e['senha'] == String(senha) && e['email'] == email)
+				console.log(user)
+				if (user === undefined || user.length === 0) {
+					window.location.replace('/apps/login')
+				}
+				else {
+
+				}
+				document.getElementById('paragrafo__welcome').innerHTML = `Olá ${user[0]['Nomeado']} <br>`
+				document.getElementById('dados').innerHTML = (
+					`Nomeado: ${user[0]['Nomeado']} <br>
+				ID: ${user[0]['ID']} <br>
+				CPF: ${user[0]['CPF']} <br>
+				Maternidade: ${user[0]['Maternidade']} <br>
+				Email: ${user[0]['email']} <br>
+				Cargo: ${user[0]['cargo']} <br>
+				Gabinete: 01 <br>
+				Vencimento: ${user[0]['Vencimento']} <br>
+				COD ID: ${user[0]['COD ID']}`)
+
+			}
+			onLoad()
+
+
+
+		</script>
 
 	</main>
 

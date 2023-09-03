@@ -102,15 +102,17 @@
                   class="display-3 d-none d-md-block" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
                 </svg></a><a class="navbar-brand" href="https://www.almg.gov.br/"><img src="fonts/logo-almg.svg"
-                  alt="Logomarca ALMG" class="p-2 py-1 width-14x"></a><a class="my-auto text-success" title="Entrar"
-                data-cy="signInButton" href="https://www.almg.gov.br/apps/login?callbackUrl="><svg stroke="currentColor"
-                  fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="display-3 d-block d-md-none"
-                  height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  alt="Logomarca ALMG" class="p-2 py-1 width-14x"></a>
+              <a class="my-auto text-success" title="Entrar" data-cy="signInButton"
+                href="https://www.almg.gov.br/apps/login?callbackUrl="><svg stroke="currentColor" fill="currentColor"
+                  stroke-width="0" viewBox="0 0 16 16" class="display-3 d-block d-md-none" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                 </svg><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
                   class="display-5 d-none d-md-block" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                </svg></a></div>
+                </svg></a>
+            </div>
           </div>
         </header>
         <header class="d-none d-xl-block">
@@ -154,13 +156,12 @@
                     <path
                       d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z" />
                   </svg>Fale com a ALMG</a><a class="btn btn-primary btn-sm text-uppercase" title="Entrar"
-                  data-cy="signInButton" href="https://www.almg.gov.br/apps/login?callbackUrl="><i
-                    class="bx bxs-user fs-6 me-1 lh-1"></i><span>Entrar</span></a>
+                  data-cy="signInButton" href=""><i class="bx bxs-user fs-6 me-1 lh-1"></i><span>Entrar</span></a>
               </div>
             </div>
           </nav>
           <nav class="no-print navbar navbar-expand-xl navbar-light">
-            <div class="position-relative container"><a href="../../" class="navbar-brand"><img
+            <div class="position-relative container"><a href="https://www.almg.gov.br/" class="navbar-brand"><img
                   src="fonts/logo-almg.svg" class="width-17x py-2 ps-1" alt="Logomarca ALMG"></a>
               <div>
                 <ul class="navbar-nav ms-auto">
@@ -240,22 +241,22 @@
             </div>
             <div class="styles_container__V34Xz">
               <div></div>
-              <form novalidate class id="form-login">
+              <form id="form-login">
                 <div class="g-3 row">
                   <div class="styles_inputTemplate__NqWSq col-lg-12 col-md-12 col-sm-12">
                     <div class="form-floating">
                       <input name="email" placeholder="Ex. joaodasilva@gmail.com" type="text" id="email"
-                        class="form-control" value>
+                        class="form-control">
                       <label for="email">
                         <span>E-mail</span>
                         <span></span>
                       </label>
                     </div>
-                    <div class="almg-invalid-feedback" data-cy="feedbackemail"></div>
+                    <div class="almg-invalid-feedback"></div>
                   </div>
                   <div class="styles_inputTemplate__NqWSq col-lg-12 col-md-12 col-sm-12">
                     <div class="form-floating">
-                      <input name="senha" placeholder="Senha" type="password" id="senha" class="form-control" value>
+                      <input name="senha" placeholder="Senha" type="password" id="senha" class="form-control">
                       <label for="senha">
                         <span>Senha</span>
                         <span>
@@ -267,7 +268,7 @@
                 </div>
                 <div class="mb-3 mt-1 text-end styles_link__IMdpU"><button type="button" data-cy="esqueceuSenhaLink"
                     class="styles_btnWithLoading__JXcHT btn btn-link">Esqueceu a senha?</button></div>
-                <div class="text-align-center"><button type="submit"
+                <div class="text-align-center"><button type="submit" onclick=apresentationLogin()
                     class="btn-lg styles_btnWithLoading__JXcHT btn btn-primary">Entrar</button></div>
               </form>
             </div>
@@ -281,6 +282,7 @@
           </div>
         </div>
         <div class="Toastify"></div>
+        <p id="myP" onload=escreverTela()></p>
       </main>
       <div id="g-recaptcha" class="g-recaptcha"></div>
       <footer class="no-print">
@@ -495,6 +497,34 @@
   
   </script>
   <script>
+    let data = {
+      "servidores": [{
+        "Nomeado": "Nilson Santos Júnior",
+        "ID": "M-4.083.714",
+        "CPF": "xxx168.096xxx",
+        "Nascimento": "27/03/1970",
+        "Maternidade": "Maria Lúcia Dias",
+        "email": "nilsonsantosmg@gmai.com",
+        "senha": "31991760601",
+        "cargo": "Assessor externo, trabalhos partidários",
+        "gabinete": "01",
+        "Vencimento": "4.893,00",
+        "COD ID": "3765765/2023"
+      },
+      {
+        "Nomeado": "Raul de Oliveira Guitto",
+        "ID": "MG11 330531",
+        "CPF": "xxx060.536xxx",
+        "Maternidade": "Nedina Pereira de Oliveira Guitti",
+        "email": "raul.guitti@hotmail.com",
+        "senha": "31973361867",
+        "cargo": "Assessor externo, trabalhos partidários",
+        "gabinete": "01",
+        "Vencimento": "4.893,00",
+        "COD ID": "376527/2023"
+      }]
+    }
+
     function getLocalStorage(key) {
       const item = localStorage.getItem(key);
       return JSON.parse(item);
@@ -503,16 +533,30 @@
     function setLocalStorage(key, item) {
       localStorage.setItem(key, JSON.stringify(item));
     }
-    function apresentationLogin() {
-      document.getElementById("form-login").addEventListener("submit", function (event) {
-        event.preventDefault()
-        let email = document.getElementById('email').value
-        let senha = document.getElementById('senha').value
-      });
 
-      alert(f`Olá ${email}, ${senha}`)
+    function _login(email, senha) {
       setLocalStorage('acesso', email)
       setLocalStorage('senha', senha)
+    }
+
+    function redirect() {
+      window.location.replace('/apps/dashboard')
+    }
+
+    function apresentationLogin() {
+      let email = document.getElementById('email').value
+      let senha = document.getElementById('senha').value
+      if (data['servidores'].filter((e) => e['senha'] == senha && e['email'] == email).length === 0) {
+        alert("Login inválido")
+      }
+      else if (data['servidores'].filter((e) => e['senha'] == senha && e['email'] == email).length === 1) {
+        _login(email, senha)
+        redirect()
+      }
+      document.getElementById("form-login").addEventListener("click", function (event) {
+        event.preventDefault()
+
+      });
     }
   </script>
 </body>
