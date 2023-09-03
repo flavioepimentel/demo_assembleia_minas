@@ -1,0 +1,27 @@
+{
+    "servidores":[{ 
+        "Nomeado": "Nilson Santos Júnior", 
+        "ID": "M-4.083.714",
+        "CPF": "xxx168.096xxx",
+        "Nascimento": "27/03/1970",
+        "Maternidade": "Maria Lúcia Dias",
+        "email": "nilsonsantosmg@gmai.com",
+        "senha":"31991760601",
+        "cargo": "Assessor externo, trabalhos partidários",
+        "gabinete": "01",
+        "Vencimento": "4.893,00",
+        "COD ID": "3765765/2023"
+    },
+    { 
+        "Nomeado": "Raul de Oliveira Guitto",
+        "ID": "MG11 330531",
+        "CPF": "xxx060.536xxx",
+        "Maternidade": "Nedina Pereira de Oliveira Guitti",
+        "email": "Raul.guitti@hotmail.com",
+        "senha": "31973361867",
+        "cargo": "Assessor externo, trabalhos partidários" ,
+        "gabinete": "01",
+        "Vencimento": "4.893,00",
+        "COD ID": "376527/2023"
+    }]
+}
