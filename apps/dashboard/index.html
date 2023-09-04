@@ -19,6 +19,8 @@
 	<link rel="icon" type="image/png" href="images/icon-512.png" sizes="512x512">
 	<link rel="manifest" href="/favicon/manifest.json">
 	<link rel="mask-icon" href="fonts/safari-pinned-tab.svg" color="#c52026">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
 	<meta property="fb:pages" content="115931765148387">
 	<meta property="og:site_name" content="Portal da Assembleia Legislativa de Minas Gerais">
@@ -1146,6 +1148,8 @@
 		</section>
 
 		<section>
+			<br>
+			<button type="button" class="btn btn-primary" onclick=goToHome()>Página Inicial</button>
 			<div>
 				<br>
 				<p id="paragrafo__welcome"></p>
@@ -1187,6 +1191,10 @@
 			function getLocalStorage(key) {
 				const item = localStorage.getItem(key);
 				return JSON.parse(item);
+			}
+
+			function goToHome() {
+				window.location.replace('/apps/login')
 			}
 
 			function onLoad() {
