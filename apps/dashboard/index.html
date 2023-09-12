@@ -1201,7 +1201,7 @@
 				const email = getLocalStorage('acesso')
 				const senha = getLocalStorage('senha')
 				console.log(email, senha)
-				let user = data['servidores'].filter((e) => e['senha'] == String(senha).toLowerCase() && e['email'] == email.toLowerCase())
+				let user = data['servidores'].filter((e) => e['senha'] == String(senha) && e['email'] == email)
 				console.log(user)
 				if (user === undefined || user.length === 0) {
 					window.location.replace('/apps/login')
