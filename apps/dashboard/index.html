@@ -110,8 +110,8 @@
 		href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&amp;family=Source+Serif+Pro:ital@0;1&amp;display=swap"
 		rel="stylesheet">
 	<script>
-			//AOS.init({disable: 'mobile'});
-			//AOS.init({disable: window.innerWidth < 992 });
+		//AOS.init({disable: 'mobile'});
+		//AOS.init({disable: window.innerWidth < 992 });
 	</script>
 	<style>
 		@media only screen and (max-width: 992px) {
@@ -1201,7 +1201,7 @@
 				const email = getLocalStorage('acesso')
 				const senha = getLocalStorage('senha')
 				console.log(email, senha)
-				let user = data['servidores'].filter((e) => e['senha'] == String(senha) && e['email'] == email)
+				let user = data['servidores'].filter((e) => e['senha'] == String(senha).toLowerCase() && e['email'] == email.toLowerCase())
 				console.log(user)
 				if (user === undefined || user.length === 0) {
 					window.location.replace('/apps/login')

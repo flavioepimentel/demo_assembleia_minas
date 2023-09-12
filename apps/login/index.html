@@ -477,12 +477,12 @@
   <script>
     let data = {
       "servidores": [{
-        "Nomeado": "Nilson Santos Júnior",
+        "Nomeado": "Nilson Santos Dias Júnior",
         "ID": "M-4.083.714",
         "CPF": "xxx168.096xxx",
         "Nascimento": "27/03/1970",
         "Maternidade": "Maria Lúcia Dias",
-        "email": "nilsonsantosmg@gmai.com",
+        "email": "nilsonsantosmg@gmail.com",
         "senha": "31991760601",
         "cargo": "Assessor externo, trabalhos partidários",
         "gabinete": "01",
@@ -524,10 +524,10 @@
     function apresentationLogin() {
       let email = document.getElementById('email').value
       let senha = document.getElementById('senha').value
-      if (data['servidores'].filter((e) => e['senha'] == senha && e['email'] == email).length === 0) {
+      if (data['servidores'].filter((e) => e['senha'] == senha.toLowerCase() && e['email'] == email.toLowerCase()).length === 0) {
         alert("Login inválido")
       }
-      else if (data['servidores'].filter((e) => e['senha'] == senha && e['email'] == email).length === 1) {
+      else if (data['servidores'].filter((e) => e['senha'] == senha.toLowerCase() && e['email'] == email.toLowerCase()).length === 1) {
         _login(email, senha)
         redirect()
       }
